@@ -13,3 +13,5 @@ When I came across the dataset for Mary's Pharmacy, I was instantly intrigued by
 - What is the distribution of sales across different drug categories? Which category contributes the highest share of sales?
 - Are there specific months or seasons when the pharmacy experiences significant increases or decreases in sales?
 - Is there a correlation between the sales of specific drugs and external factors such as advertising campaigns, promotions, or seasonal events?
+
+# Data Sourcing
