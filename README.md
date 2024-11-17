@@ -52,7 +52,7 @@ I designed a **Star Schema** data model with **one-to-one relationships** to opt
 - **One-to-One relationship** between `SalesFactTable` and `TimeTable` via `TimeID`.
 
 ### 📸 Data Model Snapshot:
-![Power BI Data Model](images/powerbi_data_model.png)
+![Power BI Data Model](images/Data_Modelling.png)
 
 ## 🔎 Exploratory Data Analysis (EDA)
 
