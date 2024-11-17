@@ -64,7 +64,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
    - **Key Insight**: Peak sales occur on **Tuesdays, Wednesdays, and Saturdays**, while Mondays see the lowest sales.
    - **Recommendation**: Optimize staffing on peak days and consider promotions on quieter days (Monday and Thursday) to boost sales.
 
-   ![line chart](https://github.com/Koketso00/MarysPharmacyAnalysis/raw/main/images/line chart.png)
+   ![Average Sales Per Day of the Week](linechart.png)
 
 
 5. **Percentage Change in Sales Revenue by Year**:
