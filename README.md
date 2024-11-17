@@ -51,26 +51,26 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
    - This column chart illustrates **sales performance** by drug category over time.
    - **Key Insight**: This allows for identifying strong-performing categories and those that may need further attention in marketing and stock management.
    
-   ![Sales by Drug Category](images/column chart.png)
+   ![Sales by Drug Category](images/images/column_chart.png)
 
 3. **Hourly Sales Heatmap**:
    - The heatmap displays **sales data by hour** of the day.
    - **Key Insight**: **Afternoons and evenings** experience the highest traffic, while late hours are quieter. This is important for optimizing staffing and store hours.
 
-   ![Hourly Sales Heatmap](images/heat map.png)
+   ![Hourly Sales Heatmap](images/images/heat_map.png)
 
 4. **Average Sales Per Day of the Week**:
    - This line chart shows the **average sales per day** for each day of the week.
    - **Key Insight**: Peak sales occur on **Tuesdays, Wednesdays, and Saturdays**, while Mondays see the lowest sales.
    - **Recommendation**: Optimize staffing on peak days and consider promotions on quieter days (Monday and Thursday) to boost sales.
 
-   ![Average Sales Per Day of the Week](linechart.png)
+   ![Average Sales Per Day of the Week](images/images/linechart.png)
 
 
 5. **Percentage Change in Sales Revenue by Year**:
    - This line chart highlights **year-over-year sales growth**, showing trends from 2014 to 2019.
    - **Key Insight**: There's a noticeable **decline from 2014 to 2015**, followed by a recovery in 2018, and a decrease in 2019. Identifying the causes behind these changes is key for future planning.
 
-   ![Percentage Change in Sales Revenue by Year](images/area chart.png)
+   ![Percentage Change in Sales Revenue by Year](images/images/area_chart.png)
 
 
