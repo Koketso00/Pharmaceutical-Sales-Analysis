@@ -19,3 +19,24 @@ When I came across the dataset for Mary's Pharmacy, I was instantly intrigued by
 The dataset for Mary's Pharmacy consists of transactional data collected over a period of 6 years (2014-2019). It includes information on the date, time, pharmaceutical drug brand name, and quantity sold. The dataset comprises 57 drugs classified into different therapeutic categories based on the Anatomical Therapeutic Chemical (ATC) Classification System.
 
 This dataset was sourced from the Point-of-Sale system used by the pharmacy, providing a rich source of information for analysis. The goal is to analyze the sales data of these pharmaceutical drugs and gain insights that can help improve business performance and drive growth for Mary's Pharmacy.
+
+## 🧹 Data Cleaning and Transformation
+
+The dataset underwent a thorough data cleaning process using **Power Query** to ensure its quality and usability. The following steps were taken:
+
+1. **Handling Missing Values**: Removed rows with missing or null values in critical fields such as date and drug brand name.
+2. **Data Type Corrections**: Ensured that columns were assigned the correct data types (e.g., date, text, integer).
+3. **Standardization**: Standardized drug names to maintain consistency across the dataset.
+4. **Date Extraction**: Extracted year, month, and day components for trend analysis.
+5. **Classification**: Categorized drugs into their respective ATC therapeutic groups.
+
+## 🔎 Exploratory Data Analysis (EDA)
+
+The analysis phase involved exploring the cleaned dataset to gain insights into sales patterns. Key questions explored include:
+
+- **Top-Selling and Least-Selling Drugs**: Identified the best and worst-performing drugs over the six-year period.
+- **Sales Trends Over Time**: Analyzed sales performance by year, month, and season.
+- **Category Sales Distribution**: Evaluated the contribution of each drug category to total sales.
+- **Peak Sales Periods**: Determined peak sales hours and days of the week.
+
+
