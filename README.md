@@ -30,29 +30,63 @@ The dataset underwent a thorough data cleaning process using **Power Query** to 
 4. **Date Extraction**: Extracted year, month, and day components for trend analysis.
 5. **Classification**: Categorized drugs into their respective ATC therapeutic groups.
 
-## 📐 Data Modeling Summary
+## Data Model Design
 
-I designed a **Star Schema** data model with **one-to-one relationships** to optimize the analysis of Mary's Pharmacy sales data. The model includes a **central Fact Table (`SalesFactTable`)** and three Dimension Tables (`DrugTable`, `DateTable`, and `TimeTable`):
+### Overview
 
-- **`SalesFactTable`**: Central table containing detailed sales data, including:
-  - `TransactionID`, `DrugID`, `DateID`, `TimeID`, `QuantitySold`, and `TotalSales`.
+The data model for this project is based on a **Star Schema**, which is a common design pattern in data warehousing that simplifies querying and analysis. The model consists of a **Fact Table** and several **Dimension Tables** that provide context to the transactional data. Below is a brief description of the tables and their relationships:
 
-- **`DrugTable`**: Contains descriptive attributes of each drug:
-  - `DrugID`, `DrugName`, `DrugCategory`.
+### Tables
 
-- **`DateTable`**: Includes all date-related attributes for analysis:
-  - `DateID`, `FullDate`, `Year`, `Month`, `Day`, `Quarter`, and `WeekNumber`.
+- **Fact Table**: 
+  - This table contains the main transactional data, specifically sales information. 
+  - It includes fields such as:
+    - `QuantitySold`: The amount of drugs sold in each transaction.
+    - `TotalSalesRevenue`: The total revenue generated from the sale.
+    - `DrugID`: The unique identifier for each drug.
+    - `RealDate`: The date the transaction occurred.
+    - `Hour`: The specific hour the transaction took place.
 
-- **`TimeTable`**: Contains temporal data for time-based analysis:
-  - `TimeID`, `Hour`, `Minute`, and `Second`.
+- **Dimension Tables**:
+  - **Drug Table**: 
+    - This table contains detailed information about each drug, including:
+      - `DrugID`: Unique identifier for the drug.
+      - `DrugCategory`: The category the drug belongs to (e.g., painkillers, antibiotics).
+      - `DrugDescription`: A description of the drug.
+  - **Time Table**: 
+    - Contains time-related data, such as:
+      - `Hour`: The specific hour the sale occurred.
+      - `TimeOfDay`: This helps to categorize sales by time.
+  - **Real Date Table**: 
+    - Contains detailed date-related information to facilitate time-based analysis:
+      - `Day`: The day of the transaction.
+      - `Month`: The month in which the sale occurred.
+      - `Year`: The year of the sale.
+      - `Season`: The season in which the sale took place.
 
-### 💡 Key Relationships:
-- **One-to-One relationship** between `SalesFactTable` and `DrugTable` via `DrugID`.
-- **One-to-One relationship** between `SalesFactTable` and `DateTable` via `DateID`.
-- **One-to-One relationship** between `SalesFactTable` and `TimeTable` via `TimeID`.
+### Key Relationships
+
+- **Drug Table ↔ Fact Table**: 
+  - The two tables are linked by `DrugID` in a **One-to-Many** relationship. This allows the Fact Table to reference detailed information about each drug from the Drug Table.
+  
+- **Fact Table ↔ Real Date Table**: 
+  - The Fact Table and Real Date Table are connected by `RealDate` in a **One-to-One** relationship. Each record in the Fact Table refers to a specific date in the Real Date Table.
+
+- **Fact Table ↔ Time Table**: 
+  - The Fact Table and Time Table are connected by `Hour` in a **One-to-Many** relationship. Each sale is associated with a specific time slot of the day from the Time Table.
+
+### Benefits of This Data Model
+
+This design allows for efficient querying and analysis of the sales data. By leveraging these relationships, you can easily analyze the data by:
+- Drug categories and descriptions
+- Sales over different times of the day
+- Trends across various time periods (day, month, year)
+- Seasonal and time-based patterns
+
+The Star Schema design is optimized for reporting and analytics in tools like Power BI, enabling deep insights into Mary's Pharmacy sales data.
 
 ### 📸 Data Model Snapshot:
-![Power BI Data Model](images/Data_Modelling.png)
+![Power BI Data Model](images/Data_Model.png)
 
 ## 🔎 Exploratory Data Analysis (EDA)
 
