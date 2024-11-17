@@ -73,4 +73,21 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 
    ![Percentage Change in Sales Revenue by Year](images/images/area_chart.png)
 
+  ## Conclusion and Insights
+
+Based on the analysis of the various visualizations, the following insights and recommendations are made:
+
+- **Staffing and Resource Allocation**: Adjust staffing schedules based on peak sales times (afternoons and evenings). Ensure adequate coverage during quieter periods.
+- **Targeted Promotions**: Run promotions during quieter hours (late hours and Mondays/Thursdays) to increase traffic and sales.
+- **Inventory Management**: Focus on stocking high-demand drugs, particularly those in the **N02BE/B** category, based on revenue and sales performance.
+- **Sales Trends**: Continue to track and analyze year-over-year performance to spot further opportunities for growth or areas that need improvement.
+
+The dashboard provides a solid foundation for data-driven decision-making to optimize operations and sales performance at Mary’s Pharmacy.
+
+## Next Steps
+
+1. **Implement Recommendations**: Put into practice the strategies suggested based on the dashboard insights.
+2. **Monitor Results**: Continue tracking sales and operational metrics, adjusting strategies as needed.
+3. **Ongoing Analysis**: Further explore data for deeper insights into drug-specific performance, seasonal trends, and potential correlations with external events or promotions. 
+
 
