@@ -64,7 +64,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
    - **Key Insight**: Peak sales occur on **Tuesdays, Wednesdays, and Saturdays**, while Mondays see the lowest sales.
    - **Recommendation**: Optimize staffing on peak days and consider promotions on quieter days (Monday and Thursday) to boost sales.
 
-   ![Average Sales Per Day of the Week](images/line chart.png)
+   ![line chart](images/line chart.png)
 
 5. **Percentage Change in Sales Revenue by Year**:
    - This line chart highlights **year-over-year sales growth**, showing trends from 2014 to 2019.
