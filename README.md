@@ -82,6 +82,13 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 
    ![Percentage Change in Sales Revenue by Year](images/images/area_chart.png)
 
+## 📊 Dashboard File
+
+You can download the Power BI dashboard file (.pbix) using the link below:
+
+[Download Mary's Pharmacy Sales Dashboard (.pbix)](./path/to/your/file/Marys_Pharmacy_Sales_Dashboard.pbix)
+
+
   ## Conclusion and Insights
 
 Based on the analysis of the various visualizations, the following insights and recommendations are made:
