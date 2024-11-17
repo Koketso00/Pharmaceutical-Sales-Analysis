@@ -45,7 +45,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
    - This pie chart shows the **revenue share** for each drug category.
    - **Key Insight**: The **N02BE/B** category generates the highest revenue, dominating sales, which should be a focus for stocking and promotions.
    
-   ![Revenue Distribution by Drug Category](images/pie chart.png)
+   ![Revenue Distribution by Drug Category](images/images/pie_chart.png)
 
 2. **Sales by Drug Category**:
    - This column chart illustrates **sales performance** by drug category over time.
