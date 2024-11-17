@@ -39,4 +39,37 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 - **Category Sales Distribution**: Evaluated the contribution of each drug category to total sales.
 - **Peak Sales Periods**: Determined peak sales hours and days of the week.
 
+## Dashboard Visualizations
+
+1. **Revenue Distribution by Drug Category**:
+   - This pie chart shows the **revenue share** for each drug category.
+   - **Key Insight**: The **N02BE/B** category generates the highest revenue, dominating sales, which should be a focus for stocking and promotions.
+   
+   ![Revenue Distribution by Drug Category](images/pie chart.png)
+
+2. **Sales by Drug Category**:
+   - This column chart illustrates **sales performance** by drug category over time.
+   - **Key Insight**: This allows for identifying strong-performing categories and those that may need further attention in marketing and stock management.
+   
+   ![Sales by Drug Category](images/column chart.png)
+
+3. **Hourly Sales Heatmap**:
+   - The heatmap displays **sales data by hour** of the day.
+   - **Key Insight**: **Afternoons and evenings** experience the highest traffic, while late hours are quieter. This is important for optimizing staffing and store hours.
+
+   ![Hourly Sales Heatmap](images/heat map.png)
+
+4. **Average Sales Per Day of the Week**:
+   - This line chart shows the **average sales per day** for each day of the week.
+   - **Key Insight**: Peak sales occur on **Tuesdays, Wednesdays, and Saturdays**, while Mondays see the lowest sales.
+   - **Recommendation**: Optimize staffing on peak days and consider promotions on quieter days (Monday and Thursday) to boost sales.
+
+   ![Average Sales Per Day of the Week](images/line chart.png)
+
+5. **Percentage Change in Sales Revenue by Year**:
+   - This line chart highlights **year-over-year sales growth**, showing trends from 2014 to 2019.
+   - **Key Insight**: There's a noticeable **decline from 2014 to 2015**, followed by a recovery in 2018, and a decrease in 2019. Identifying the causes behind these changes is key for future planning.
+
+   ![Percentage Change in Sales Revenue by Year](images/area chart.png)
+
 
