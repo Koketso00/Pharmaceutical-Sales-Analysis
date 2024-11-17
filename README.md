@@ -30,6 +30,30 @@ The dataset underwent a thorough data cleaning process using **Power Query** to 
 4. **Date Extraction**: Extracted year, month, and day components for trend analysis.
 5. **Classification**: Categorized drugs into their respective ATC therapeutic groups.
 
+## 📐 Data Modeling Summary
+
+I designed a **Star Schema** data model with **one-to-one relationships** to optimize the analysis of Mary's Pharmacy sales data. The model includes a **central Fact Table (`SalesFactTable`)** and three Dimension Tables (`DrugTable`, `DateTable`, and `TimeTable`):
+
+- **`SalesFactTable`**: Central table containing detailed sales data, including:
+  - `TransactionID`, `DrugID`, `DateID`, `TimeID`, `QuantitySold`, and `TotalSales`.
+
+- **`DrugTable`**: Contains descriptive attributes of each drug:
+  - `DrugID`, `DrugName`, `DrugCategory`.
+
+- **`DateTable`**: Includes all date-related attributes for analysis:
+  - `DateID`, `FullDate`, `Year`, `Month`, `Day`, `Quarter`, and `WeekNumber`.
+
+- **`TimeTable`**: Contains temporal data for time-based analysis:
+  - `TimeID`, `Hour`, `Minute`, and `Second`.
+
+### 💡 Key Relationships:
+- **One-to-One relationship** between `SalesFactTable` and `DrugTable` via `DrugID`.
+- **One-to-One relationship** between `SalesFactTable` and `DateTable` via `DateID`.
+- **One-to-One relationship** between `SalesFactTable` and `TimeTable` via `TimeID`.
+
+### 📸 Data Model Snapshot:
+![Power BI Data Model](images/powerbi_data_model.png)
+
 ## 🔎 Exploratory Data Analysis (EDA)
 
 The analysis phase involved exploring the cleaned dataset to gain insights into sales patterns. Key questions explored include:
@@ -38,6 +62,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 - **Sales Trends Over Time**: Analyzed sales performance by year, month, and season.
 - **Category Sales Distribution**: Evaluated the contribution of each drug category to total sales.
 - **Peak Sales Periods**: Determined peak sales hours and days of the week.
+
 
 ## Tools Used
 
