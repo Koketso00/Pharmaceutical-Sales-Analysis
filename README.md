@@ -167,7 +167,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 
    ![Percentage Change in Sales Revenue by Year](images/images/area_chart.png)
 
-## 📊 Dashboard File
+##  Dashboard File
 
 You can download the Power BI dashboard file (.pbix) using the link below:
 
