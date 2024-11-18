@@ -35,7 +35,7 @@ The dataset consists of pharmaceutical transactional data collected over a perio
 
 This dataset was sourced from the Point-of-Sale system used by the pharmacy, providing a rich source of information for analysis. The goal is to analyze the sales data of these pharmaceutical drugs and gain insights that can help improve business performance and drive growth for the Pharmacy.
 
-## 🛠️ Data Transformation (ETL Process)
+##  Data Transformation (ETL Process)
 
 The data transformation process focused on ensuring high data quality before analysis. Using **Power Query**, I performed the following ETL tasks:
 
