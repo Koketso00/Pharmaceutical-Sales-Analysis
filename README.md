@@ -1,4 +1,4 @@
-# MarysPharmacyAnalysis
+# Pharmaceutical Sales Analysis
 ![isaac-quesada-6P3OpQDbL3Y-unsplash](https://github.com/Koketso00/MarysPharmacyAnalysis/assets/99824427/4e918f1a-0d83-4a1e-81cf-c77daf357d8b)
 This repository showcases a comprehensive analysis of sales data from a Pharmaceutical company.Through this project, I applied my skills in data transformation, data modeling, and visualization using **Power BI** and **Power Query**, focusing on the ETL process to derive meaningful business insights.
 
