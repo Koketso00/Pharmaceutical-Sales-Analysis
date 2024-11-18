@@ -2,6 +2,21 @@
 ![isaac-quesada-6P3OpQDbL3Y-unsplash](https://github.com/Koketso00/MarysPharmacyAnalysis/assets/99824427/4e918f1a-0d83-4a1e-81cf-c77daf357d8b)
 This repository showcases a comprehensive analysis of sales data from a Pharmaceutical company.Through this project, I applied my skills in data transformation, data modeling, and visualization using **Power BI** and **Power Query**, focusing on the ETL process to derive meaningful business insights.
 
+## 📋 Table of Contents
+
+- [Introduction](#introduction)
+- [Problem Statement](#problem-statement)
+- [Data Sourcing](#data-sourcing)
+- [Data Transformation (ETL Process)](#data-transformation-etl-process)
+- [Data Model Design](#data-model-design)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Tools Used](#tools-used)
+- [Dashboard Visualizations](#dashboard-visualizations)
+- [Dashboard File](#dashboard-file)
+- [Conclusion and Insights](#conclusion-and-insights)
+- [Next Steps](#next-steps)
+
+
 # Introduction
 
 When I came across the dataset for Mary's Pharmacy, I was instantly intrigued by its extensive and intricate nature. As an individual keen on honing my expertise in data cleaning, analysis, and visualization, this dataset presents a perfect opportunity for me to immerse myself and enhance my abilities.
