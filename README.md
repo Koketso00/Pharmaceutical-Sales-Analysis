@@ -171,7 +171,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 
 You can download the Power BI dashboard file (.pbix) using the link below:
 
-[Download Mary's Pharmacy Sales Dashboard (.pbix)](PBI/Pharmaceutical_Sales_Dashboard.pbix)
+[Download Pharmaceutical Sales Dashboard (.pbix)](PBI/Pharmaceutical_Sales_Dashboard.pbix)
 
 
   ## Conclusion and Insights
