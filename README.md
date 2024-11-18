@@ -112,7 +112,7 @@ This design allows for efficient querying and analysis of the sales data. By lev
 The Star Schema design is optimized for reporting and analytics in tools like Power BI, enabling deep insights into Mary's Pharmacy sales data.
 
 ### 📸 Data Model Snapshot:
-![Power BI Data Model](images/Data_Model.png)
+![Power BI Data Model](images/images/Data_Model.png)
 
 ## 🔎 Exploratory Data Analysis (EDA)
 
