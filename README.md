@@ -20,15 +20,26 @@ The dataset for Mary's Pharmacy consists of transactional data collected over a 
 
 This dataset was sourced from the Point-of-Sale system used by the pharmacy, providing a rich source of information for analysis. The goal is to analyze the sales data of these pharmaceutical drugs and gain insights that can help improve business performance and drive growth for the Pharmacy.
 
-## 🧹 Data Cleaning and Transformation
+## 🛠️ Data Transformation (ETL Process)
 
-The dataset underwent a thorough data cleaning process using **Power Query** to ensure its quality and usability. The following steps were taken:
+The data transformation process focused on ensuring high data quality before analysis. Using **Power Query**, I performed the following ETL tasks:
 
-1. **Handling Missing Values**: Removed rows with missing or null values in critical fields such as date and drug brand name.
-2. **Data Type Corrections**: Ensured that columns were assigned the correct data types (e.g., date, text, integer).
-3. **Standardization**: Standardized drug names to maintain consistency across the dataset.
-4. **Date Extraction**: Extracted year, month, and day components for trend analysis.
-5. **Classification**: Categorized drugs into their respective ATC therapeutic groups.
+### Extract
+- Loaded raw transactional data directly from the pharmacy's Point-of-Sale system into Power BI.
+
+### Transform
+- **Data Cleaning**:
+  - Removed records with missing or null values in critical fields (e.g., date, drug name).
+  - Corrected data types for accurate analysis (e.g., date, text, integer).
+  - Standardized drug brand names for consistency.
+- **Feature Engineering**:
+  - Extracted key date components (year, month, day) to enable trend analysis.
+  - Created new calculated columns such as `TotalSalesRevenue` and `TimeOfDay` for more granular analysis.
+- **Categorization**:
+  - Mapped drugs into their respective ATC therapeutic categories for enhanced analysis.
+
+### Load
+- Loaded the cleaned and transformed dataset into Power BI for visualization and further analysis.
 
 ## Data Model Design
 
