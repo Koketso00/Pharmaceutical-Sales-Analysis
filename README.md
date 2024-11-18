@@ -130,7 +130,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 - **Power Query**: Used for data transformation and cleaning, including merging tables, filtering, and shaping data for analysis.
 - **Excel**: Initially used for exploratory analysis and data validation.
 - **DAX (Data Analysis Expressions)**: Utilized for creating custom calculations and measures in Power BI, such as Total Sales and Average Sales per Day.
-- **Power BI Service**: Published and shared the interactive Power BI report/dashboard.
+
 
 
 ## Dashboard Visualizations
