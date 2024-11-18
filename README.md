@@ -19,7 +19,7 @@ This repository showcases a comprehensive analysis of sales data from a Pharmace
 
 # Introduction
 
-When I came across the dataset for Mary's Pharmacy, I was instantly intrigued by its extensive and intricate nature. As an individual keen on honing my expertise in data cleaning, analysis, and visualization, this dataset presents a perfect opportunity for me to immerse myself and enhance my abilities.
+When I came across the dataset for Pharmaceutical Sales Data, I was instantly intrigued by its extensive and intricate nature. As an individual keen on honing my expertise in data cleaning, analysis, and visualization, this dataset presents a perfect opportunity for me to immerse myself and enhance my abilities.
 
 # Problem Statement
 
@@ -31,7 +31,7 @@ When I came across the dataset for Mary's Pharmacy, I was instantly intrigued by
 
 # Data Sourcing
 
-The dataset for Mary's Pharmacy consists of transactional data collected over a period of 6 years (2014-2019). It includes information on the date, time, pharmaceutical drug brand name, and quantity sold. The dataset comprises 57 drugs classified into different therapeutic categories based on the Anatomical Therapeutic Chemical (ATC) Classification System.
+The dataset consists of pharmaceutical transactional data collected over a period of 6 years (2014-2019). It includes information on the date, time, pharmaceutical drug brand name, and quantity sold. The dataset comprises 57 drugs classified into different therapeutic categories based on the Anatomical Therapeutic Chemical (ATC) Classification System.
 
 This dataset was sourced from the Point-of-Sale system used by the pharmacy, providing a rich source of information for analysis. The goal is to analyze the sales data of these pharmaceutical drugs and gain insights that can help improve business performance and drive growth for the Pharmacy.
 
