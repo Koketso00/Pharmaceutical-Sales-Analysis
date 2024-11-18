@@ -114,7 +114,7 @@ The Star Schema design is optimized for reporting and analytics in tools like Po
 ### 📸 Data Model Snapshot:
 ![Power BI Data Model](images/images/Data_Model.png)
 
-## 🔎 Exploratory Data Analysis (EDA)
+##  Exploratory Data Analysis (EDA)
 
 The analysis phase involved exploring the cleaned dataset to gain insights into sales patterns. Key questions explored include:
 
