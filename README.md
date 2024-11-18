@@ -7,7 +7,7 @@ This repository showcases a comprehensive analysis of sales data from a Pharmace
 - [Introduction](#introduction)
 - [Problem Statement](#problem-statement)
 - [Data Sourcing](#data-sourcing)
-- [Data Transformation (ETL Process)](#data-transformation-etl-process)
+- [🛠️Data Transformation (ETL Process)](#🛠️data-transformation-etl-process)
 - [Data Model Design](#data-model-design)
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 - [Tools Used](#tools-used)
