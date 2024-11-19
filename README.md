@@ -12,7 +12,7 @@ This repository showcases a comprehensive analysis of sales data from a Pharmace
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 - [Tools Used](#tools-used)
 - [Dashboard Visualizations](#dashboard-visualizations)
-- [Interactive_Dashboard_Download](#interactive-dashboard-download)
+- [Interactive Dashboard Download](#interactive-dashboard-download)
 - [Conclusion and Insights](#conclusion-and-insights)
 - [Next Steps](#next-steps)
 
