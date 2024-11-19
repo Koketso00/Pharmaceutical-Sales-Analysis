@@ -56,60 +56,85 @@ The data transformation process focused on ensuring high data quality before ana
 ### Load
 - Loaded the cleaned and transformed dataset into Power BI for visualization and further analysis.
 
-## Data Model Design
+# Data Model Design
 
-### Overview
+## Overview
 
-The data model for this project is based on a **Star Schema**, which is a common design pattern in data warehousing that simplifies querying and analysis. The model consists of a **Fact Table** and several **Dimension Tables** that provide context to the transactional data. Below is a brief description of the tables and their relationships:
+The data model is a crucial part of any data analysis or reporting process. In this project, we have used a **Star Schema** to structure the data. A Star Schema is widely used in data warehousing for its simplicity and efficiency in data retrieval, especially in analytical environments. The central component of the model is the **Fact Table**, which contains the transactional data, and it connects to various **Dimension Tables**, which contain descriptive or categorical data.
 
-### Tables
+This design allows for flexible, high-performance querying and makes it easier to analyze different aspects of the data. Below is a detailed explanation of the data model and the relationships between the tables.
 
-- **Fact Table**: 
-  - This table contains the main transactional data, specifically sales information. 
-  - It includes fields such as:
-    - `QuantitySold`: The amount of drugs sold in each transaction.
-    - `TotalSalesRevenue`: The total revenue generated from the sale.
-    - `DrugID`: The unique identifier for each drug.
-    - `RealDate`: The date the transaction occurred.
-    - `Hour`: The specific hour the transaction took place.
+## Tables and Relationships
 
-- **Dimension Tables**:
-  - **Drug Table**: 
-    - This table contains detailed information about each drug, including:
-      - `DrugID`: Unique identifier for the drug.
-      - `DrugCategory`: The category the drug belongs to (e.g., painkillers, antibiotics).
-      - `DrugDescription`: A description of the drug.
-  - **Time Table**: 
-    - Contains time-related data, such as:
-      - `Hour`: The specific hour the sale occurred.
-      - `TimeOfDay`: This helps to categorize sales by time.
-  - **Real Date Table**: 
-    - Contains detailed date-related information to facilitate time-based analysis:
-      - `Day`: The day of the transaction.
-      - `Month`: The month in which the sale occurred.
-      - `Year`: The year of the sale.
-      - `Season`: The season in which the sale took place.
+### Fact Table (`fact_table`)
 
-### Key Relationships
+The **Fact Table** serves as the center of the data model. It contains transactional data, such as sales, usage, or other metrics related to the business. In this model, the **Fact Table** stores entries with the following key attributes:
+- **Drug ID**: Identifies the specific drug.
+- **Hour**: The time at which the transaction occurred.
+- **Real Date**: The specific date when the transaction took place.
 
-- **Drug Table ↔ Fact Table**: 
-  - The two tables are linked by `DrugID` in a **One-to-Many** relationship. This allows the Fact Table to reference detailed information about each drug from the Drug Table.
-  
-- **Fact Table ↔ Real Date Table**: 
-  - The Fact Table and Real Date Table are connected by `RealDate` in a **One-to-One** relationship. Each record in the Fact Table refers to a specific date in the Real Date Table.
+### Dimension Tables
 
-- **Fact Table ↔ Time Table**: 
-  - The Fact Table and Time Table are connected by `Hour` in a **One-to-Many** relationship. Each sale is associated with a specific time slot of the day from the Time Table.
+The **Dimension Tables** provide descriptive information about the metrics stored in the **Fact Table**. Each dimension table is linked to the **Fact Table** using a specific key, creating the relationships that allow for meaningful analysis. In this design, the following Dimension Tables are used:
 
-### Benefits of This Data Model
+1. **Drug Table (`drug_table`)**
+   - Contains detailed information about each drug, such as its name, category, manufacturer, and other attributes.
+   - **Key Column**: `Drug ID`, which links to the **Fact Table**.
 
-This design allows for efficient querying and analysis of the sales data. By leveraging these relationships, you can easily analyze the data by:
-- Drug categories and descriptions
-- Sales over different times of the day
-- Trends across various time periods (day, month, year)
-- Seasonal and time-based patterns
+2. **Time Table (`time_table`)**
+   - Contains time-related information such as the hour of the day, day of the week, month, and year.
+   - **Key Column**: `Hour`, which links to the **Fact Table**.
 
-The Star Schema design is optimized for reporting and analytics in tools like Power BI, enabling deep insights into Mary's Pharmacy sales data.
+3. **Real Date Table (`real_date_table`)**
+   - Contains calendar-related information such as the actual date, week number, month, quarter, and year.
+   - **Key Column**: `Real Date`, which links to the **Fact Table**.
+
+## Relationships Between Tables
+
+### 1. **Fact Table → Drug Table**
+   - The relationship between the **Fact Table** and the **Drug Table** is based on the **Drug ID**.
+   - In the **Fact Table**, each entry corresponds to a specific drug, and the **Drug ID** field in the **Fact Table** is linked to the **Drug ID** field in the **Drug Table**.
+   - **Cardinality**: This relationship is a **Many-to-One** relationship, meaning many entries in the **Fact Table** (representing multiple transactions) are related to a single entry in the **Drug Table** (representing one drug).
+   - **Reasoning**: This relationship allows the data to be aggregated and analyzed by different drug characteristics (e.g., drug category, manufacturer).
+
+### 2. **Fact Table → Time Table**
+   - The relationship between the **Fact Table** and the **Time Table** is based on the **Hour** field.
+   - Each transaction in the **Fact Table** has an associated time, and the **Hour** field in the **Fact Table** is linked to the **Hour** field in the **Time Table**.
+   - **Cardinality**: This is a **Many-to-One** relationship, where many records in the **Fact Table** (representing multiple transactions) relate to a single record in the **Time Table** (representing one specific hour of the day).
+   - **Reasoning**: This allows the analysis of transactions across different time periods, such as hours of the day, weekdays, etc.
+
+### 3. **Fact Table → Real Date Table**
+   - The relationship between the **Fact Table** and the **Real Date Table** is based on the **Real Date** field.
+   - In the **Fact Table**, each transaction is associated with a specific date, and the **Real Date** field in the **Fact Table** links to the **Real Date** field in the **Real Date Table**.
+   - **Cardinality**: This is a **Many-to-One** relationship, meaning multiple records in the **Fact Table** can correspond to a single date in the **Real Date Table**.
+   - **Reasoning**: This relationship allows for analysis over time, where you can aggregate data by day, week, month, quarter, or year.
+
+## Data Model Schema: Star Schema
+
+In a Star Schema, the **Fact Table** sits at the center, and all related **Dimension Tables** surround it. This model is designed to facilitate fast query performance, especially in analytics, by minimizing the number of joins required. The relationships are clear and straightforward, allowing for intuitive data exploration.
+
+- The **Fact Table** contains the measures (e.g., sales, quantity, etc.), while the **Dimension Tables** provide context to those measures.
+- The **Fact Table** is connected to each **Dimension Table** via a foreign key, which corresponds to the primary key of the related dimension.
+- This setup enables users to easily filter, group, and analyze the data by any dimension (e.g., by drug, by time, by date).
+
+## Why Star Schema?
+
+The **Star Schema** was chosen for this data model for the following reasons:
+1. **Simplicity**: The schema is simple to understand and easy to implement, making it ideal for quick reporting and analysis.
+2. **Performance**: The Star Schema reduces the number of joins between tables, which improves query performance, especially when working with large datasets.
+3. **Flexibility**: It allows users to slice the data across multiple dimensions, making it versatile for different types of analysis.
+4. **Scalability**: As the dataset grows, the Star Schema remains efficient, and new dimensions can be easily added to the model.
+
+## Summary
+
+This data model is structured to provide efficient and scalable analysis by organizing the data into a central **Fact Table** and related **Dimension Tables**. The relationships between the tables allow for easy filtering, aggregation, and exploration of the data, making it suitable for various business intelligence tasks.
+
+- The **Fact Table** holds transactional data such as drug usage, time of transaction, and date.
+- The **Dimension Tables** provide descriptive details about the drugs, time, and dates, enabling the analysis to be done from different perspectives.
+- The relationships between the tables are set up as **Many-to-One**, ensuring that each record in the Fact Table corresponds to a single record in each Dimension Table.
+
+This model provides a strong foundation for performing meaningful analysis and deriving insights from the data.
+
 
 ### 📸 Data Model Snapshot:
 ![Power BI Data Model](images/images/Data_Model.png)
