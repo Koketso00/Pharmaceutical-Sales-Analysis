@@ -12,7 +12,7 @@ This repository showcases a comprehensive analysis of sales data from a Pharmace
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 - [Tools Used](#tools-used)
 - [Dashboard Visualizations](#dashboard-visualizations)
-- [Dashboard File](#dashboard-file)
+- [Interactive Dashboard Download](#interactive_dashboard_download)
 - [Conclusion and Insights](#conclusion-and-insights)
 - [Next Steps](#next-steps)
 
@@ -191,7 +191,7 @@ The analysis phase involved exploring the cleaned dataset to gain insights into 
 
    ![Percentage Change in Sales Revenue by Year](images/images/area_chart.png)
 
-##  Dashboard File
+##  Interactive Dashboard Download
 
 You can download the Power BI dashboard file (.pbix) using the link below:
 
