@@ -58,6 +58,9 @@ The data transformation process focused on ensuring high data quality before ana
 
 # Data Model Design
 
+### 📸 Data Model Snapshot:
+![Power BI Data Model](images/images/Data_Model.png)
+
 ## Overview
 
 The data model is a crucial part of any data analysis or reporting process. In this project, we have used a **Star Schema** to structure the data. A Star Schema is widely used in data warehousing for its simplicity and efficiency in data retrieval, especially in analytical environments. The central component of the model is the **Fact Table**, which contains the transactional data, and it connects to various **Dimension Tables**, which contain descriptive or categorical data.
@@ -134,10 +137,6 @@ This data model is structured to provide efficient and scalable analysis by orga
 - The relationships between the tables are set up as **Many-to-One**, ensuring that each record in the Fact Table corresponds to a single record in each Dimension Table.
 
 This model provides a strong foundation for performing meaningful analysis and deriving insights from the data.
-
-
-### 📸 Data Model Snapshot:
-![Power BI Data Model](images/images/Data_Model.png)
 
 ##  Exploratory Data Analysis (EDA)
 
